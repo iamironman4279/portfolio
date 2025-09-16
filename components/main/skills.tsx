@@ -9,6 +9,13 @@ import {
   SKILL_DATA,
 } from "@/constants";
 
+export interface Skill {
+  skill_name: string;
+  image: string;
+  width: number;
+  height: number;
+}
+
 export const Skills = () => {
   return (
     <section
@@ -19,7 +26,7 @@ export const Skills = () => {
       <SkillText />
 
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {SKILL_DATA.map((skill, i) => (
+        {SKILL_DATA.map((skill: Skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
@@ -32,7 +39,7 @@ export const Skills = () => {
       </div>
 
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FRONTEND_SKILL.map((skill, i) => (
+        {FRONTEND_SKILL.map((skill: Skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
@@ -43,8 +50,9 @@ export const Skills = () => {
           />
         ))}
       </div>
+
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {BACKEND_SKILL.map((skill, i) => (
+        {BACKEND_SKILL.map((skill: Skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
@@ -55,8 +63,9 @@ export const Skills = () => {
           />
         ))}
       </div>
+
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {FULLSTACK_SKILL.map((skill, i) => (
+        {FULLSTACK_SKILL.map((skill: Skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
@@ -67,8 +76,9 @@ export const Skills = () => {
           />
         ))}
       </div>
+
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {OTHER_SKILL.map((skill, i) => (
+        {OTHER_SKILL.map((skill: Skill, i) => (
           <SkillDataProvider
             key={skill.skill_name}
             src={skill.image}
